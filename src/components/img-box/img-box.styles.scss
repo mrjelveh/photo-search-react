@@ -1,0 +1,38 @@
+
+.card {
+    position: relative;
+    transition: all 250ms !important;
+
+
+    &#{-img} {
+        display: block;
+    }
+
+
+    .card-actions {
+        transition: ease-in 250ms;
+        position: absolute;
+        opacity: 0;
+        bottom: -20px;
+        left: 0;
+        right: 0;
+        &#{--download} {
+            background-color: rgba(#cdcdcd, 0.3) !important;
+        }
+        &#{--avatar} {
+            margin-left: auto !important;
+            border: solid 3px rgba(#cdcdcd, 0.3);
+            width: 1.3em !important;
+            height: 1.3em !important;
+            cursor: pointer;
+        }
+    }
+    &:hover {
+        transition: ease-in 250ms;
+        .card-actions {
+            opacity: 1;
+            transition: ease-in 250ms;
+            bottom: 0;
+        }
+    }
+}
